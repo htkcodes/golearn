@@ -1,18 +1,15 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	card := kek()
-	fmt.Println(card)
+	cards := newDeck()
 
-	cards := []string{kek(), kek(), "kekito"}
-	cards = append(cards, "lmao")
-	fmt.Println(cards)
+	cards.shuffle()
 
-}
+	//fmt.Print(cards.toString())
 
-func kek() string {
-	return "keklol"
+	//	cards.saveToFile("lol.txt")
+
+	cards.print()
+
 }
